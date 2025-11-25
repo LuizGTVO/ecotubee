@@ -1,0 +1,259 @@
+:root {
+  --primary-color: #004b23;
+  --second-color: #edffdd;
+  --third-color: #63ad22;
+  --text-dark: #071408;
+  --text-light: #3a6b38;
+  --extre-light: #f8fafc;
+  --white: #ffffff;
+  --gradient: linear-gradient(to right bottom, #ffd43b, #ff9900);
+  --background: #edffdd;
+  --positive: #0d8ae5;
+  --negative: #ff6b6b;
+
+  --ff: "montserrat", sans-serif;
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background);
+}
+
+.navbar_container {
+  width: 0 auto;
+  padding: 10px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar_logo img {
+  width: 5rem;
+  margin-left: 2rem;
+  margin-right: -2rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  color: var(--text-light);
+  width: 500px;
+}
+
+.search {
+  border: none;
+  background: var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0.2rem;
+}
+
+.search ion-icon {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.navbar_links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+  margin: 1rem 2rem;
+}
+
+.navbar_links a {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.2s ease;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 0.4rem 0.7rem;
+}
+
+.navbar_links a:hover {
+  color: var(--white);
+  background-color: #004b23b7;
+  border-radius: 15px;
+  padding: 0.4rem 0.7rem;
+}
+
+.navbar_button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar_buttons {
+  display: flex;
+  gap: 1.4rem;
+  margin-right: 2rem;
+}
+
+.navbar_button button {
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.navbar_button ion-icon {
+  border-radius: 50%;
+  padding: 0.2rem;
+  transition: 0.3s;
+}
+
+.navbar_button ion-icon:hover {
+  color: var(--third-color);
+}
+
+.videos {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-bottom: 3rem;
+}
+
+.videos h2 {
+  font-family: var(--ff);
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  padding: 0 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+}
+
+.carrossel02 {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  cursor: pointer;
+}
+
+.videoplay {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.videoplay img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.7rem;
+}
+
+.videoplay h4 {
+  display: flex;
+  font-family: var(--ff);
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: lighter;
+}
+
+.videoplay:hover h4 {
+  color: var(--third-color);
+}
+
+.slides {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.slides button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex: 0 0 auto;
+  width: 300px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slides button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slides button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1401px) {
+  #toggle_menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .navbar_links,
+  .navbar_buttons {
+    display: none;
+  }
+
+  #toggle_menu {
+    display: block;
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+
+  .videos h2 {
+    font-family: var(--ff);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    padding: 0 3rem;
+    border-radius: 15px;
+    margin: 1.5rem 0 2rem 0;
+  }
+  
+  .carrossel02 {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    cursor: pointer;
+  }
+
+  .search-box input {
+    width: 300px;
+  }
+}
+
+@media (max-width: 760px) {
+    .search-box input {
+        width: 200px;
+    }
+}
